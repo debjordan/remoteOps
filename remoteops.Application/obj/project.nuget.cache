@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "dRhLhSU8LIo=",
+  "success": true,
+  "projectFilePath": "/home/jordan/projects/remoteOps/remoteops.Application/remoteops.Application.csproj",
+  "expectedPackageFiles": [
+    "/home/jordan/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.7/microsoft.aspnetcore.app.ref.8.0.7.nupkg.sha512"
+  ],
+  "logs": []
+}

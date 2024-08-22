@@ -1,0 +1,6 @@
+@remoteops.API_HostAddress = http://localhost:5037
+
+GET {{remoteops.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
