@@ -1,12 +1,14 @@
-using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Mvc;
 using remoteops.Application.Interfaces;
 using remoteops.Domain.Entities;
-using RouteAttribute = Microsoft.AspNetCore.Components.RouteAttribute;
+using remoteops.Infrastructure.Exceptions;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace remoteops.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/Equipamento")]
     [ApiController]
     public class EquipamentoController : ControllerBase
     {
@@ -16,42 +18,81 @@ namespace remoteops.API.Controllers
         {
             _repository = repository;
         }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(Guid id)
         {
-            var equipamento = await _repository.GetByIdAsync(id);
-            if(equipamento == null) return NotFound();
-            return Ok(equipamento);
+            try
+            {
+                var equipamento = await _repository.GetByIdAsync(id);
+                if (equipamento == null) return NotFound(new Equipamento());
+                return Ok(equipamento);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new Equipamento());
+            }
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var equipamento = await _repository.GetAllAsync();
-            return Ok(equipamento);
+            try
+            {
+                var equipamentos = await _repository.GetAllAsync();
+                return Ok(equipamentos);
+            }
+            catch (Exception ex)
+            {
+                
+                return StatusCode(500, new List<Equipamento>());
+            }
         }
 
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] Equipamento equipamento)
         {
-            if(equipamento == null) return BadRequest();
-            await _repository.AddAsync(equipamento);
-            return CreatedAtAction(nameof(Get), new {id = equipamento.id }, equipamento);
+            if (equipamento == null) return BadRequest(new Equipamento());
+
+            try
+            {
+                await _repository.AddAsync(equipamento);
+                return CreatedAtAction(nameof(Get), new { id = equipamento.Id }, equipamento);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new Equipamento());
+            }
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(Guid id, [FromBody], Equipamento equipamento)
+        public async Task<IActionResult> Update(Guid id, [FromBody] Equipamento equipamento)
         {
-            if(id != equipamento.Id) return BadRequest();
-            await _repository.UpdateAsync(equipamento);
-            return NoContent();
+            if (equipamento == null || id != equipamento.Id) return BadRequest(new Equipamento()); // Retorna um objeto vazio em caso de erro de validação
+
+            try
+            {
+                await _repository.UpdateAsync(equipamento);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new Equipamento());
+            }
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)
         {
-            await _repository.DeleteAsync(id);
-            return NoContent();
+            try
+            {
+                await _repository.DeleteAsync(id);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { Message = "An error occurred while deleting the equipamento." }); // Retorna uma mensagem genérica em caso de erro
+            }
         }
     }
 }
