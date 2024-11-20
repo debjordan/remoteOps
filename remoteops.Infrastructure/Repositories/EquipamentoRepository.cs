@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using remoteops.Application.Interfaces;
 using remoteops.Domain.Entities;
-using remoteops.Infrastructure.Exceptions; // Importa a pasta de exceções
+using remoteops.Infrastructure.Exceptions;
 
 namespace remoteops.Infrastructure.Repositories
 {
@@ -26,11 +26,11 @@ namespace remoteops.Infrastructure.Repositories
             }
             catch (DbUpdateException ex)
             {
-                throw new DatabaseException("An error occurred while adding the equipamento to the database.", ex);
+                throw new DatabaseException("Ocorreu um erro ao adicionar o equipamento ao banco.", ex);
             }
             catch (Exception ex)
             {
-                throw new CustomException("An unexpected error occurred.", ex);
+                throw new CustomException("Ocorreu um erro inesperado.", ex);
             }
         }
 
@@ -47,11 +47,11 @@ namespace remoteops.Infrastructure.Repositories
             }
             catch (DbUpdateException ex)
             {
-                throw new DatabaseException("An error occurred while deleting the equipamento from the database.", ex);
+                throw new DatabaseException("Ocorreu um erro ao excluir o equipamento ao banco.", ex);
             }
             catch (Exception ex)
             {
-                throw new CustomException("An unexpected error occurred.", ex);
+                throw new CustomException("Ocorreu um erro inesperado.", ex);
             }
         }
 

@@ -1,0 +1,16 @@
+/home/jordan/projects/remoteOps/remoteops.Application/bin/Debug/net8.0/remoteops.Application.deps.json
+/home/jordan/projects/remoteOps/remoteops.Application/bin/Debug/net8.0/remoteops.Application.dll
+/home/jordan/projects/remoteOps/remoteops.Application/bin/Debug/net8.0/remoteops.Application.pdb
+/home/jordan/projects/remoteOps/remoteops.Application/bin/Debug/net8.0/remoteops.Domain.dll
+/home/jordan/projects/remoteOps/remoteops.Application/bin/Debug/net8.0/remoteops.Domain.pdb
+/home/jordan/projects/remoteOps/remoteops.Application/obj/Debug/net8.0/remoteops.Application.csproj.AssemblyReference.cache
+/home/jordan/projects/remoteOps/remoteops.Application/obj/Debug/net8.0/remoteops.Application.GeneratedMSBuildEditorConfig.editorconfig
+/home/jordan/projects/remoteOps/remoteops.Application/obj/Debug/net8.0/remoteops.Application.AssemblyInfoInputs.cache
+/home/jordan/projects/remoteOps/remoteops.Application/obj/Debug/net8.0/remoteops.Application.AssemblyInfo.cs
+/home/jordan/projects/remoteOps/remoteops.Application/obj/Debug/net8.0/remoteops.Application.csproj.CoreCompileInputs.cache
+/home/jordan/projects/remoteOps/remoteops.Application/obj/Debug/net8.0/remoteops.Application.sourcelink.json
+/home/jordan/projects/remoteOps/remoteops.Application/obj/Debug/net8.0/remoteop.95FF8F47.Up2Date
+/home/jordan/projects/remoteOps/remoteops.Application/obj/Debug/net8.0/remoteops.Application.dll
+/home/jordan/projects/remoteOps/remoteops.Application/obj/Debug/net8.0/refint/remoteops.Application.dll
+/home/jordan/projects/remoteOps/remoteops.Application/obj/Debug/net8.0/remoteops.Application.pdb
+/home/jordan/projects/remoteOps/remoteops.Application/obj/Debug/net8.0/ref/remoteops.Application.dll

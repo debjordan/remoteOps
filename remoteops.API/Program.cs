@@ -19,8 +19,11 @@ builder.Services.AddDbContext<RemoteOpsDbContext>(options =>
 // Register Application and Infrastructure layers
 builder.Services.AddApplicationServices();
 builder.Services.AddInfrastructureServices(builder.Configuration);
-
+builder.Services.AddHostedService<TaskExecutionService>();
 var app = builder.Build();
+
+app.UseMiddleware<ErrorHandlingMiddleware>();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -28,6 +31,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
 
 app.UseHttpsRedirection();
 

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("remoteops.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b2124fb854f488fc7da60a0f8583e72121c4b824")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e1228da3d8e6419fcdd6e061e7534ce1931877b0")]
 [assembly: System.Reflection.AssemblyProductAttribute("remoteops.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("remoteops.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

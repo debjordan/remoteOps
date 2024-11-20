@@ -1,0 +1,6 @@
+/home/jordan/projects/remoteOps/remoteops.Infrastructure/obj/Debug/net8.0/remoteops.Infrastructure.csproj.AssemblyReference.cache
+/home/jordan/projects/remoteOps/remoteops.Infrastructure/obj/Debug/net8.0/remoteops.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/home/jordan/projects/remoteOps/remoteops.Infrastructure/obj/Debug/net8.0/remoteops.Infrastructure.AssemblyInfoInputs.cache
+/home/jordan/projects/remoteOps/remoteops.Infrastructure/obj/Debug/net8.0/remoteops.Infrastructure.AssemblyInfo.cs
+/home/jordan/projects/remoteOps/remoteops.Infrastructure/obj/Debug/net8.0/remoteops.Infrastructure.csproj.CoreCompileInputs.cache
+/home/jordan/projects/remoteOps/remoteops.Infrastructure/obj/Debug/net8.0/remoteops.Infrastructure.sourcelink.json
